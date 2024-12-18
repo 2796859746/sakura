@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>无岐的药材收购工具</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>无岐的药材收购工具</h1>
+  <!-- 切换栏 -->
+  <div id="switchBar">
+    <button onclick="switchModule('infoExtraction')">信息提取</button>
+    <!-- <button onclick="switchModule('valueCalculation')">价值计算</button> -->
+    <button onclick="switchModule('priceList')">药材价格表</button>
+  </div>
+
+  <!-- 信息提取模块 -->
+  <div id="infoExtraction" class="module active">
+    <h2>信息提取</h2>
+    <p style="text-align: center; color: #888; margin-top: 20px;">有问题或建议找qq:2796859746</p>
+    <p style="text-align: center; color: #888; margin-top: 20px;">与灵梦对话输入”药材背包“后复制回复内容即可提取</p>
+    <label for="user-input"></label><textarea id="user-input" placeholder="请输入..."></textarea><br>
+    <button id="paste-button1">粘贴</button>
+    <button id="process-button">提取</button>
+    <button id="clear-button1">清空</button>
+
+    <h2>药材信息</h2>
+    <div id="herb-info"></div>
+  </div>
+
+  <!-- 价值计算模块 -->
+  <div id="valueCalculation" class="module">
+    <h2>药材总价值计算</h2>
+    <p style="text-align: center; color: #888; margin-top: 20px;">有问题或建议找qq:2796859746</p>
+    <p style="text-align: center; color: #888; margin-top: 20px;">与灵梦对话输入“药材背包“后复制回复内容即可提取</p>
+    <p style="text-align: center; color: #888; margin-top: 20px;">当前功能已适配手机端</p>
+    <label for="herbValueInput"></label><textarea id="herbValueInput" placeholder="粘贴药材信息..."></textarea><br>
+    <button id="paste-button2">粘贴</button>
+    <button onclick="calculateTotalValue()">计算</button>
+    <button id="clear-button2">清空</button>
+    <p id="result">总价值: 0 灵石</p>
+  </div>
+
+  <!-- 药材价格模块 -->
+  <div id="priceList" class="module">
+    <h2>药材价格表</h2>
+    <img width="50%" src="./1.png"/>
+  </div>
+  
+</div>
+<script src="script.js"></script>
+<!-- 谷歌数据 -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7QLY585NC7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7QLY585NC7');
+</script>
+</body>
+</html>
